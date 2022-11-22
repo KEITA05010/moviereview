@@ -1,0 +1,32 @@
+<!--お気に入り画面-->
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+  
+</div>
+<div class="col-lg-10">
+<br>
+<h4>お気に入り</h4>
+
+<br>
+<%@favorites.each do |favorite| %>
+<%= link_to(movie_path(favorite.movie), class: 'list-content') do %>
+<%= image_tag favorite.movie.image, size: "200x200" %>
+<%end%>
+<br><%=favorite.movie.title%>
+<br><%=favorite.movie.release_date%>
+<%end%>
+
+
+
+
+
+
+<!--ログインすると気に入った映画を-->
+<!--こちらのページに保存することができます-->
+<!--初めての方はこちら→<%=link_to "新規登録", new_user_registration_path%>-->
+<!--登録したことがある方→<%=link_to "ログイン", new_user_session_path%>-->
+
+ </div> 
+ </div> 
+ </div> 

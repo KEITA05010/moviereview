@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+#if Rails.env.development?
+   Admin.create!(
+      email: '5@1.com',
+      password: '123456',)
+#end
+   
+genres = %w{
+   アクション
+   ホラー
+   SF
+}
+
+genres.each do |genre|
+   Genre.create!(name: genre)
+end

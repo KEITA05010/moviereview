@@ -1,0 +1,37 @@
+<!--映画新規登録画面-->
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+  
+</div>
+<div class="col-lg-10">
+<br>
+<h3>映画新規登録</h3>
+ 
+<%= form_with model: @movie ,url: admin_movies_path do |f| %>  
+ 
+<p>映画画像
+ <%= f.file_field :image, placeholder: "商品画像", accept: "image/*" %> </p>
+ 
+<p>タイトル
+<%= f.text_field :title %></p>
+
+<p>公開日
+<%= f.date_field :release_date %></p>
+
+
+<p>説明文
+ <%= f.text_area :introduction %></p>
+  
+<p>ジャンル
+<%=f.collection_select :genre_id, Genre.all, :id, :name %></p>
+
+ 
+<p>
+<%= f.submit '新規登録'%> </p>
+
+<%end%>
+
+ </div> 
+ </div> 
+ </div> 

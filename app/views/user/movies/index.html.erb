@@ -1,0 +1,30 @@
+<!--映画一覧-->
+
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+  
+</div>
+<div class="col-lg-10">
+<br>
+<h4>新作映画一覧</h4>
+<div class="movie-list">
+  <% @movies.each do |movie| %>
+    <%= movie.title %>
+  <% end %>
+</div>
+  
+
+
+<%@movies.each do |movie| %>
+<%= link_to(movie_path(movie), class: 'list-content') do %>
+<%= image_tag movie.image, size: "200x200" %>
+<%end%>
+<%=movie.title%>
+<%=movie.release_date%>
+
+<%end%>
+
+</div> 
+</div> 
+</div> 

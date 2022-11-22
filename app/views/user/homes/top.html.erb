@@ -1,0 +1,25 @@
+<!--会員トップページ-->
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+  
+</div>
+<div class="col-lg-10">
+<br>
+<h3>上映中の映画一覧</h3>
+
+<% @movies.each do |movie| %>
+  <%= link_to(movie_path(movie), class: 'list-content') do %>
+    <% if movie.image.attached? %>
+      <%= image_tag movie.image, size: "200x200" %>
+    <% else %>
+    
+    <% end %>
+  <% end %>
+  <%= movie.title %>
+  <%= movie.release_date %>
+<% end %>
+
+</div> 
+</div> 
+</div> 

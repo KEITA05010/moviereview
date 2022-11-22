@@ -1,0 +1,47 @@
+<!--映画詳細-->
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+  
+</div>
+<div class="col-lg-10">
+<br>
+<%= image_tag @movie.image, size: "200x200" %>
+ <br>
+ <h2><%=@movie.title%></h2>
+ <%=@movie.genre.name%>
+ <%=@movie.release_date%>年公開
+ <br>
+ <%=@movie.introduction%>
+ <br>
+ <br>
+ 
+<% if user_signed_in? %>
+<%= form_with model: @favorite ,url: favorite_path(@movie) do |f| %>
+ <%= f.hidden_field :movie_id, :value => @movie.id %>
+ <%= f.hidden_field :user_id, :value => current_user.id %>
+ <%= f.submit 'お気に入りに追加する'%>
+<%end%>
+<br>
+<%@comments.each do |comment| %>
+<%=comment.content%>
+<%end%>
+<br>
+<%= form_with model: @comment ,url: comments_path, method: :post do |f| %>
+ <%= f.hidden_field :movie_id, :value => @movie.id %>
+ <%= f.hidden_field :user_id, :value => current_user.id %>
+ <%= f.label :content, "コメント" %>
+ <%= f.text_area :content %>
+ <%= f.submit 'コメントする'%>
+<%end%>
+
+<%else%>
+ユーザー登録するとこの映画をお気に入りに保存することができます
+→<%=link_to "新規登録", new_user_registration_path%>
+登録したことがある方はログインしてください
+→<%=link_to "ログイン", new_user_session_path%>
+<%end%>
+
+</div> 
+ </div> 
+ </div> 
