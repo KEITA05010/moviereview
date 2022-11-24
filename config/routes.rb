@@ -31,7 +31,7 @@ end
    get "/" => "homes#top",as: "root"
    get 'search' => 'movies#search'
    get "/success" => "homes#success"
- 
+   get "/favoritetest" => "homes#favoritetest"
 
    resources :movies, only: [:index, :show ]
    resources :comments
