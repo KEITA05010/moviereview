@@ -38,16 +38,25 @@
   padding-right: 0.1rem;
   font-weight: 500;
 }
+.main {
+  display: flex;
+}
+.sidebar {
+  position: sticky;
+  width: 220px;
+  height: 600px;
+  top: 0px;
+}
+.content {
+  width: 100%;
+}
 .listings {
   min-height: 100vh;
-  height: 100%;
-  width: 220px;
-  float: left;
   color: #ab9ba9;
+  min-width: 220px;
   background-color: #4d394b;
   overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 10;
+  
   @media screen and (max-width: 600px) {
     display: none;
     position: absolute;

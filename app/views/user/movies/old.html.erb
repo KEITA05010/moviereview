@@ -1,25 +1,25 @@
 <!--昔の映画一覧-->
 
 <div class="container">
-<div class="row">
-<div class="col-lg-2">
-  
-</div>
-<div class="col-lg-10">
-<br>
-<h4>名作映画一覧</h4>
-
-<%@movies.each do |movie| %>
-<%= link_to(movie_path(movie), class: 'list-content') do %>
-<%= image_tag movie.image, size: "200x200" %>
-<%end%>
-<br><%=movie.title%>
-<br><%=movie.release_date%>公開
-
-
-
-<%end%>
-
- </div> 
- </div> 
- </div> 
+  <div class="row">
+    <div class="col-lg-2">
+      
+    </div>
+    <div class="col-lg-3">
+      <br>
+      <h4>名作映画一覧</h4>
+      <div class="movie-list">
+       <% @tmdb_movies['table']['results'].each do |movie| %>
+       <p> <%= movie['table']['title'] %></p>
+       <p> <%= movie['table']['release_date'] %>公開</p>
+       <p> <%= movie['table']['id'] %></p>
+       <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
+       <% end %>
+      </div>
+     
+      
+      
+      
+    </div> 
+  </div> 
+</div> 

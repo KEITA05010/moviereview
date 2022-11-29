@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :favorite_movies
-  has_many :comments, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :comments  #User.commentsで、ユーザーの所有するコメントを取得できる。
 
   enum is_deleted: {Available: false, Invalid: true}
     #有効会員はtrue、退会済み会員はfalse

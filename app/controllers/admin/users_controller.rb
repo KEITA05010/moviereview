@@ -1,23 +1,23 @@
 class Admin::UsersController < ApplicationController
     
-def check
+ def check
     @user = User.find(params[:user_id])
     #ユーザーの情報を見つける
-end
+ end
 
-def withdrawl
+ def withdrawl
     @user = User.find(params[:user_id])
     #現在ログインしているユーザーを@userに格納
     @user.update(is_deleted: "Invalid")
     #updateで登録情報をInvalidに変更
     redirect_to admin_path
     #指定されたrootへのpath
-end
+ end
 
-private
+ private
 
-def user_params
-  params.require(:user).permit(:deleted)
-end
+ def user_params
+   params.require(:user).permit(:deleted)
+ end
 
 end

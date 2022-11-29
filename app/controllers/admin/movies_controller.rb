@@ -19,32 +19,31 @@ end
 def create
 @movie=Movie.new(movie_params)
 
-if @movie.save
+ if @movie.save
 
-redirect_to admin_movie_path(@movie)
-else
- @movies=Movie.all
+ redirect_to admin_movie_path(@movie)
+ else
+  @movies=Movie.all
   render :index
-end 
+ end 
 
 end 
 
 def update
-@movie = Movie.find(params[:id])
-if @movie.update(movie_params)
- flash[:notice]="You have updated book successfully."
-redirect_to admin_movies_path
-else
-render :index
-end
-
+ @movie = Movie.find(params[:id])
+ if @movie.update(movie_params)
+  flash[:notice]="You have updated book successfully."
+  redirect_to admin_movies_path
+ else
+  render :index
+ end
 end
 
 
 private
 # ストロングパラメータ
 def movie_params
-params.require(:movie).permit(:title, :introduction, :genre_id, :image, :release_date )
+ params.require(:movie).permit(:title, :introduction, :genre_id, :image, :release_date )
 end
 
  

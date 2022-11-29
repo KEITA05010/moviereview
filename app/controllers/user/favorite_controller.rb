@@ -18,5 +18,5 @@ class User::FavoriteController < ApplicationController
     favorite.save
     redirect_to favorite_index_path
   end
-
+ 
 end

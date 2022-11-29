@@ -65,15 +65,13 @@
       </div>
     </nav>
   </header>
-
-  <div class="row">
-    <div class="col-2">
+  <div class="main">
+    <div class="sidebar">
       <%= render'layouts/sidebar' %>
     </div>
-    <div class="col-8">
+    <div class="content">
       <%= yield %>
-    </div>
+   </div>
   </div>
-
 </body>
 </html>
