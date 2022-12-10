@@ -4,6 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :favorite_movies
+  has_many :movies, through: :favorite_movies
   has_many :posts, dependent: :destroy
   has_many :comments  #User.commentsで、ユーザーの所有するコメントを取得できる。
 

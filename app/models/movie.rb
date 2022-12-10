@@ -7,8 +7,8 @@ class Movie < ApplicationRecord
     has_many :comments, dependent: :destroy
 
     
-def self.search(keyword)
-where(["title like? ", "%#{keyword}%"])
-end
+# def self.search(keyword)
+# where(["title like? ", "%#{keyword}%"])
+# end
 
 end

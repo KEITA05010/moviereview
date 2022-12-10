@@ -6,13 +6,14 @@ class User::MoviesController < ApplicationController
  Tmdb::Api.language("ja") # こちらで映画情報の表示の際の言語設定を日本語にできます
  
  def index
- @tmdb_movies =  JSON.parse(Tmdb::Movie.top_rated.to_json)
+ @tmdb_movies =  JSON.parse(Tmdb::Movie.popular.to_json)['table']['results']
  pp @tmdb_movies
+ 
  
  end
 
 def old
-  @tmdb_movies =  JSON.parse(Tmdb::Movie.popular.to_json)
+  @tmdb_movies =  JSON.parse(Tmdb::Movie.top_rated.to_json)['table']['results']
   pp @tmdb_movies
   
 end
@@ -23,6 +24,7 @@ if Movie.exists?(tmdb_id: params[:id])
 else
     @movie=Movie.create(tmdb_id: params[:id])#現在の映画のid
 end
+
     @movie_data=Tmdb::Movie.detail(params[:id])
 
    
@@ -35,7 +37,8 @@ end
 end
 
 def search
-  @movies = Movie.search(params[:keyword])
+  @movies =  JSON.parse(Tmdb::Search.movie(params[:keyword]).to_json)['table']['results']
+  @tmdb_movies = @movies.filter { |m| m['table']['title'].include?(params[:keyword]) }         
   @keyword = params[:keyword]
   render "index"
 end

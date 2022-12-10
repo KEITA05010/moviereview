@@ -2,7 +2,7 @@ class User::FavoriteController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @favorites=current_user.favorite_movies
+    @favorites= current_user.movies
   end
   
   def create
@@ -16,6 +16,7 @@ class User::FavoriteController < ApplicationController
     favorite.user = current_user
     favorite.movie = movie
     favorite.save
+
     redirect_to favorite_index_path
   end
  

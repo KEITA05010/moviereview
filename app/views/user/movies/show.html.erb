@@ -8,14 +8,16 @@
 <br>
 <img src="https://image.tmdb.org/t/p/w200/<%= @movie_data['poster_path'] %>" width~"300px;">
  <br>
- <h2> <%= @movie_data['title'] %></h2>
+ <h4> <%= @movie_data['title'] %></h4>
  <%= @movie_data['release_date'] %>公開
  <br>
  <p> <%= @movie_data['overview'] %></p>
  <br>
  <br>
- 
+ <h5>コメント一覧</h5>
 <%@comments.each do |comment| %>
+ID:<%=comment.user_id%>
+<%=comment.user.user_name%>
 <%=comment.content%>
 <%end%>
 <br>
@@ -26,6 +28,12 @@
  <%= f.text_area :content %>
  <%= f.submit 'コメントする'%>
 <%end%>
+
+
+
+
+ <%= link_to 'お気に入りに追加する', favorite_path(@movie), method: :post %>
+<br>
 
 
 </div> 

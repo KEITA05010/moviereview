@@ -1,28 +1,35 @@
-<!--映画詳細画面-->
+<!--映画詳細（管理人）-->
 <div class="container">
 <div class="row">
 <div class="col-lg-2">
-  
+ 
 </div>
 <div class="col-lg-10">
+ <br>
+ <h4>映画詳細（管理人）</h4>
 <br>
-<h4>映画詳細</h4>
+<img src="https://image.tmdb.org/t/p/w200/<%= @movie_data['poster_path'] %>" width~"300px;">
+ <br>
+ <br>
+ <h4> <%= @movie_data['title'] %></h4>
+ <br>
+ <%= @movie_data['release_date'] %>公開
+ <br>
+ <p> <%= @movie_data['overview'] %></p>
+ <br>
+ <h5>コメント一覧</h5>
+<%@comments.each do |comment| %>
+ID:<%=comment.user_id%>
+<%=comment.user.user_name%>
+<%=comment.user.email%>
+<%=comment.content%>
+<%end%>
 <br>
-  <%= image_tag @movie.image, size: "200x200" %>
-<p> 映画タイトル
- <%=@movie.title%></p>
- <p>公開日
- <%=@movie.release_date%></p>
-<p> 説明文
- <%=@movie.introduction%></p>
- <p>ジャンル
- <%=@movie.genre.name%></p>
- 
- 
- 
-  <p><%=link_to "編集する",edit_admin_movie_path(@movie)%></p>
- 
- 
- </div> 
+
+
+
+
+
+</div> 
  </div> 
  </div> 

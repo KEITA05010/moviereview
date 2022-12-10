@@ -1,46 +1,27 @@
 <!--映画一覧（管理人）-->
 
+
 <div class="container">
-<div class="row">
-<div class="col-lg-2">
-  
-</div>
-<div class="col-lg-10">
-<br>
-<h4>映画一覧</h4>
-<br>
-<%=link_to "新規登録",new_admin_movie_path%>
-
-<table class="table">
-  
-<thead>
-   <tr>
-      <th>タイトル</th>
-      <th>公開日</th>
-      <th>ジャンル</th>
-   </tr>
-</thead>
-  
- <tbody>
-      <%@movies.each do |movie| %>
-
-
-        <tr>
-            <td><%=link_to movie.title,admin_movie_path(movie)%></td>
-            <td><%=movie.release_date%></td>
-            <td><%=movie.genre.name%></td>
-            
-            
-        </tr>
-        
-  
-    
-   
-  <%end%>
+  <div class="row">
+    <div class="col-lg-2">
       
- </tbody>
- </table>
-
- </div> 
- </div> 
- </div> 
+    </div>
+    <div class="col-lg-10">
+      <br>
+      <h4>新作映画一覧（管理人）</h4>
+      <div class="movie-list row ">
+       <% @tmdb_movies.each do |movie| %>
+       <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+       <h5><p> <%=link_to movie['table']['title'],admin_movie_path(movie['table']['id']) %></p></h5>
+       <p> <%= movie['table']['release_date'] %>公開</p>
+       <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
+       </div>
+       <% end %>
+      </div>
+    
+      
+      
+      
+    </div> 
+  </div> 
+</div> 

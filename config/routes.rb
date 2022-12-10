@@ -23,12 +23,13 @@ devise_for :admin, controllers: {
     patch "withdrawl"
     #ユーザーの会員状況を更新
 end
-  resources :movies, only: [:new, :index, :show, :create, :edit, :update]
-  resources :genres, only: [:new, :show, :edit,:index,:update,:create]
+  resources :movies, only: [:index, :show,]
+  get "/old" => "movies#old"
  end
  
  scope module: :user do
    get "/" => "homes#top",as: "root"
+   get "/about" => "homes#about"
    get 'search' => 'movies#search'
    get "/success" => "homes#success"
    get "/favoritetest" => "homes#favoritetest"
