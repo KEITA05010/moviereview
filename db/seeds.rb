@@ -7,13 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #if Rails.env.development?
-   Admin.create!(
-      email: '5@1.com',
-      password: '123456',)
+   Admin.create(email: '5@1.com', password: '123456')
 #end
    
 genres = %w{
-   アクション
+   アクショ
    ホラー
    SF
 }
