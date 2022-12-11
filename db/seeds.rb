@@ -10,12 +10,3 @@
    Admin.create(email: '5@1.com', password: '123456')
 #end
    
-genres = %w{
-   アクショ
-   ホラー
-   SF
-}
-
-genres.each do |genre|
-   Genre.create!(name: genre)
-end
