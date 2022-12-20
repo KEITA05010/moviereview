@@ -33,14 +33,12 @@ end
    get 'search' => 'movies#search'
    get "/success" => "homes#success"
    get "/favoritetest" => "homes#favoritetest"
-
    resources :movies, only: [:index, :show ]
    resources :comments
    resources :favorite, only: [:index, :edit, :update, :destroy ]
    post '/favorite/:movie_id' => "favorite#create"
    get "/old" => "movies#old"
-   
-    
+   get "/result" => "movies#result"
 
  end
  

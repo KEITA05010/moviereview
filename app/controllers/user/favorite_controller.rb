@@ -16,7 +16,6 @@ class User::FavoriteController < ApplicationController
     favorite.user = current_user
     favorite.movie = movie
     favorite.save
-
     redirect_to favorite_index_path
   end
  

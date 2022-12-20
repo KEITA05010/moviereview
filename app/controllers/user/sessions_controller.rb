@@ -9,10 +9,10 @@ class User::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   byebug
-  #   super
-  # end
+  def create
+    flash[:notice] = "検索が成功"
+    super
+  end
 
   # DELETE /resource/sign_out
   # def destroy

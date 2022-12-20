@@ -1,62 +1,70 @@
 <!--新規登録画面-->
 
-<div class="container">
-<div class="row">
-<div class="col-lg-2">
-  
-</div>
-<div class="col-lg-10">
-<br>
-<h4>注意事項</h4>
-登録するとお気に入りに好きな映画を追加したり
-映画のレビューにコメントすることができます
-
-映画に関係ないコメント、個人情報や他者を不快にさせる
-コメントをした場合、退会させられる場合があります。
-
-<br>
-<br>
-<h3>新規登録</h3>
-
-<%= form_with model: @user, url: user_registration_path do |f| %>
-  <%= render "user/shared/error_messages", resource: resource %>
-
-
- <div class="field">
-    <%= f.label :ユーザー名 %><br />
-    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
-  </div>
-  
-
-  <div class="field">
-    <%= f.label :メールアドレス %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :パスワード %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> 文字以上)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :確認用パスワード %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "新規登録" %>
-  </div>
-<% end %>
-
-
-<br>
-<h5>既に登録済みの方</h5>
-<%=link_to "こちら", new_user_session_path%>からログインしてください
-
- </div> 
- </div> 
- </div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        
+      </div>
+      <div class="col-lg-10">
+        <font size="4">
+          <br>
+          登録するとお気に入りに好きな映画を追加したり
+          映画のレビューにコメントすることができます。<br>
+          <br>
+          <font color="#FF0033">
+            <span class="font_test">
+              
+            ＊映画に関係ないコメント、個人情報や他者を不快にさせるコメントをした場合、<br>
+            管理者によって退会させられる場合があります。
+            </span>
+          
+          </font><br>
+          <br>
+          
+          <br>
+          <br>
+          <h3>新規登録</h3>
+          
+          <%= form_with model: @user, url: user_registration_path do |f| %>
+            <%= render "user/shared/error_messages", resource: resource %>
+            
+            
+            <div class="field">
+              <%= f.label :ユーザー名 %><br />
+              <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
+            </div>
+            
+            
+            <div class="field">
+              <%= f.label :メールアドレス %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+            
+            
+            <div class="field">
+              <%= f.label :パスワード %>
+              <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> 文字以上)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
+            
+            <div class="field">
+              <%= f.label :確認用パスワード %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
+            <br>
+            <div class="actions">
+              <%= f.submit "新規登録" %>
+              
+            </div>
+          <% end %>
+          
+          
+          <br>
+          <h5>既に登録済みの方</h5>
+          <%=link_to "こちら", new_user_session_path%>からログインしてください
+        </font>
+      </div> 
+    </div> 
+  </div> 

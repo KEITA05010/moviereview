@@ -11,7 +11,7 @@ class User::CommentsController < ApplicationController
     private
     # ストロングパラメータ
     def comment_params
-    params.require(:comment).permit(:movie_id,:content,:user_id )
+        params.require(:comment).permit(:movie_id,:content,:user_id )
     end
     
 end

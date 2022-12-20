@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
 
 .channel-menu {
   position: fixed;
@@ -110,4 +111,40 @@
 
 .channel.active {
   background: #4c9689;
+}
+
+
+// 一文字間隔を空ける（文字の高さの1/10の大きさ）
+.no3 {
+  letter-spacing: 0.1em;
+}
+
+
+// 文字を太くする
+.font_test {
+    font-weight:  bold;
+}
+
+
+// 行間を空ける
+.px-num{
+    line-height: 25px
+}
+
+// フォント（Noto Sans Japanese）
+.chfont{
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+
+
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.arrow{
+  width:      50px;
+  height:     50px;
 }

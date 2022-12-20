@@ -1,26 +1,24 @@
 <!--会員トップページ-->
-<div class="container">
-<div class="row">
-<div class="col-lg-2">
-  
-</div>
-<div class="col-lg-10">
-<br>
-<h3>上映中の映画一覧</h3>
- <div class="movie-list row ">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-1">
         
-       <% @tmdb_movies['table']['results'].each do |movie| %>
-       <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
-       <p> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></p>
-       <p> <%= movie['table']['release_date'] %>公開</p>
-       <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
-       </div>
-       <% end %>
       </div>
-     
-      
-      
-      
-</div> 
-</div> 
-</div> 
+      <div class="col-lg-11">
+        <%= flash[:notice] %>
+        <br>
+        <h3>上映中の映画一覧</h3>
+        <div class="movie-list row ">
+          
+          <% @tmdb_movies['table']['results'].each do |movie| %>
+            <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+              <p> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></p>
+              <p> <%= movie['table']['release_date'] %>公開</p>
+              <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
+            </div>
+          <% end %>
+        </div>
+        
+      </div> 
+    </div> 
+  </div> 

@@ -1,26 +1,27 @@
 <!--昔の映画一覧（管理人）-->
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-2">
-      
-    </div>
-    <div class="col-lg-10">
-      <br>
-      <h4>人気の高い映画（管理人）</h4>
-      <div class="movie-list row ">
-       <% @tmdb_movies.each do |movie| %>
-       <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
-       <h5><p> <%=link_to movie['table']['title'],admin_movie_path(movie['table']['id']) %></p></h5>
-       <p> <%= movie['table']['release_date'] %>公開</p>
-       <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
-       </div>
-       <% end %>
-      </div>
-    
-      
-      
-      
+    <div class="row">
+        <div class="col-lg-1">
+            
+        </div>
+        <div class="col-lg-11">
+            <br>
+            <h4>人気の高い映画（管理人）</h4>
+            <div class="movie-list row ">
+                <% @tmdb_movies.each do |movie| %>
+                    <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+                        <h5><p> <%=link_to movie['table']['title'],admin_movie_path(movie['table']['id']) %></p></h5>
+                        <p> <%= movie['table']['release_date'] %>公開</p>
+                        <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        
+        
+        
+        
+        </div> 
     </div> 
-  </div> 
 </div> 

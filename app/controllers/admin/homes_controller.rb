@@ -1,7 +1,7 @@
 class Admin::HomesController < ApplicationController
-    
-def top
- @users=User.all
-end
+
+ def top
+  @users=User.all
+ end
 
 end
