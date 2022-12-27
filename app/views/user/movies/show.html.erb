@@ -5,14 +5,14 @@
     
    </div>
    <div class="col-lg-10">
-    <p class="no3">
+    <div class="chfont">
      <br>
-     <img src="https://image.tmdb.org/t/p/w200/<%= @movie_data['poster_path'] %>" width~"300px;">
+     <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= @movie_data['poster_path'] %>" width~"300px;"></p>
      <br>
-     <h4> <%= @movie_data['title'] %></h4>
-     <%= @movie_data['release_date'] %>公開
+    <p style="margin: 10px;"> <h4> <%= @movie_data['title'] %></h4></p>
+     <p style="margin: 10px;"><%= @movie_data['release_date'] %>公開</p>
      <br>
-     <p> <%= @movie_data['overview'] %></p>
+     <p style="margin: 10px;"> <%= @movie_data['overview'] %></p>
      <br>
      <br>
      <h5>コメント一覧</h5>
@@ -36,7 +36,7 @@
      <%= link_to 'お気に入りに追加する', favorite_path(@movie), method: :post %>
      <br>
      
-    </p>
+    </div>
    </div> 
   </div> 
  </div> 

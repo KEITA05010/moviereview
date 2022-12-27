@@ -6,28 +6,32 @@
             <div class="col-lg-1">
                 
             </div>
-            <div class="col-lg-11">
-                <br>
-                <h4>検索結果</h4>
-                <% if @tmdb_movies && @tmdb_movies.count != 0 %>
-                <!--→変数があり、なおかつ０ではない-->
-                
-                
-                
-                <div class="movie-list row ">
-                    <%= @tmdb_movies.count %>
-                    <% @tmdb_movies.each do |movie| %>
-                        <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
-                            <h5><p> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></p></h5>
-                            <p> <%= movie['table']['release_date'] %>公開</p>
-                            <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;">
-                        </div>
+            <div class="col-lg-10">
+                <div class="chfont">
+                    <br>
+                    <h4>「<%= params[:keyword] %>」 の検索結果</h4>
+                    <% if @tmdb_movies && @tmdb_movies.count != 0 %>
+                    <!--→変数があり、なおかつ０ではない-->
+                    
+                     <%= @tmdb_movies.count %>件の映画が出ました
+                    
+                    <div class="movie-list row ">
+                       
+                        <% @tmdb_movies.each do |movie| %>
+                            <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+                                <p style="margin: 10px;"><h5> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></h5></p>
+                                <%= movie['table']['release_date'] %>公開
+                            　　<p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;"></p>
+                            </div>
+                        <% end %>
+                    </div>
+                    <%else%>
+                    該当作品はありませんでした。
                     <% end %>
                 </div>
-                <%else%>
-                該当作品はありませんでした。
-                <% end %>
-                
             </div> 
+            <div class="col-lg-1">
+                
+            </div>
         </div> 
     </div> 

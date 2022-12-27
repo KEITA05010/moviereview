@@ -4,35 +4,39 @@
    <div class="col-lg-1">
     
    </div>
-   <div class="col-lg-11">
-    <br>
-    <h4>お気に入り</h4>
-    
-    <br>
-    <div class="movie-list row ">
-     <%@favorites.pluck(:tmdb_id).each do |id| %>
-      <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
-       
-       <%  movie = Tmdb::Movie.detail(id)%>
-       
-       <img src="https://image.tmdb.org/t/p/w200/<%= movie['poster_path'] %>" width~"300px;">
-       <h5><%=link_to movie['title'],movie_path(movie['id']) %></h5>
-       <%= movie['release_date'] %>公開
-       <br>
-       
-      </div>
-     <%end%>
+   <div class="col-lg-10">
+    <div class="chfont">
+     <br>
+     <h4>お気に入り</h4>
+     
+     <br>
+     <div class="movie-list row ">
+      <%@favorites.pluck(:tmdb_id).each do |id| %>
+       <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+        
+        <%  movie = Tmdb::Movie.detail(id)%>
+        
+        <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['poster_path'] %>" width~"300px;"></p>
+        <p style="margin: 10px;"><h5><%=link_to movie['title'],movie_path(movie['id']) %></h5></p>
+        <p style="margin: 10px;"><%= movie['release_date'] %>公開</p
+        <br>
+        
+       </div>
+      <%end%>
+     </div>
+     
+     
+     
+     
+     
+     <!--ログインすると気に入った映画を-->
+     <!--こちらのページに保存することができます-->
+     <!--初めての方はこちら→<%#=link_to "新規登録", new_user_registration_path%>-->
+     <!--登録したことがある方→<%#=link_to "ログイン", new_user_session_path%>-->
     </div>
-    
-    
-    
-    
-    
-    <!--ログインすると気に入った映画を-->
-    <!--こちらのページに保存することができます-->
-    <!--初めての方はこちら→<%#=link_to "新規登録", new_user_registration_path%>-->
-    <!--登録したことがある方→<%#=link_to "ログイン", new_user_session_path%>-->
-    
    </div> 
+   <div class="col-lg-1">
+    
+   </div>
   </div> 
  </div> 

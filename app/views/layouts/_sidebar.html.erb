@@ -1,15 +1,17 @@
 <!--サイドバー専用-->
 <% if user_signed_in? %>
 <div class="listings">
-  <div class="listings_channels">
-    <h2 class="listings_header">user</h2>
-    <ul class="channel_list">
-      <%= sidebar_link_item('トップページ', root_path) %>
-      <%= sidebar_link_item('サイト概要', about_path) %>
-      <%= sidebar_link_item('話題の新作映画', movies_path) %>
-      <%= sidebar_link_item('人気の映画',  old_path) %>
-      <%= sidebar_link_item('お気に入り',  favorite_index_path) %>
-    </ul>
+  <div class="chfont">
+    <div class="listings_channels">
+      <h2 class="listings_header">user</h2>
+      <ul class="channel_list">
+        <%= sidebar_link_item('トップページ', root_path) %>
+        <%= sidebar_link_item('サイト概要', about_path) %>
+        <%= sidebar_link_item('話題の新作映画', movies_path) %>
+        <%= sidebar_link_item('人気の映画',  old_path) %>
+        <%= sidebar_link_item('お気に入り',  favorite_index_path) %>
+      </ul>
+    </div>
   </div>
 </div>
 
@@ -17,28 +19,32 @@
 <% elsif admin_signed_in? %>
 
 <div class="listings">
-  <div class="listings_channels">
-    <h2 class="listings_header">admin</h2>
-    <ul class="channel_list">
-      <%= sidebar_link_item('トップページ', admin_path) %>
-      <%= sidebar_link_item('映画一覧', admin_movies_path) %>
-      <%= sidebar_link_item('人気の映画',  admin_old_path) %>
-    </ul>
+  <div class="chfont">
+    <div class="listings_channels">
+      <h2 class="listings_header">admin</h2>
+      <ul class="channel_list">
+        <%= sidebar_link_item('トップページ', admin_path) %>
+        <%= sidebar_link_item('映画一覧', admin_movies_path) %>
+        <%= sidebar_link_item('人気の映画',  admin_old_path) %>
+      </ul>
+    </div>
   </div>
 </div>
 
 <% else %>
 
 <div class="listings">
-  <div class="listings_channels">
-    <h2 class="listings_header">user</h2>
-    <ul class="channel_list">
-      <%= sidebar_link_item('トップページ', root_path) %>
-      <%= sidebar_link_item('サイト概要', about_path) %>
-      <%= sidebar_link_item('話題の新作映画', movies_path) %>
-      <%= sidebar_link_item('人気の映画',  old_path) %>
-      <%= sidebar_link_item('お気に入り',  favoritetest_path) %>
-    </ul>
+  <div class="chfont">
+    <div class="listings_channels">
+      <h2 class="listings_header">user</h2>
+      <ul class="channel_list">
+        <%= sidebar_link_item('トップページ', root_path) %>
+        <%= sidebar_link_item('サイト概要', about_path) %>
+        <%= sidebar_link_item('話題の新作映画', movies_path) %>
+        <%= sidebar_link_item('人気の映画',  old_path) %>
+        <%= sidebar_link_item('お気に入り',  favoritetest_path) %>
+      </ul>
+    </div>
   </div>
 </div>
 <%end%>
