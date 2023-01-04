@@ -38,6 +38,7 @@ end
    resources :favorite, only: [:index, :edit, :update, :destroy ]
    post '/favorite/:movie_id' => "favorite#create"
    get "/old" => "movies#old"
+   get "/action" => "movies#action"
    get "/result" => "movies#result"
 
  end

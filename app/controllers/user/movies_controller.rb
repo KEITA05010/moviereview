@@ -15,6 +15,10 @@ class User::MoviesController < ApplicationController
         pp @tmdb_movies
     end
     
+    def action
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(28).to_json)['table']['results']
+    end
+    
     def result
         
     end
