@@ -39,6 +39,16 @@ end
    post '/favorite/:movie_id' => "favorite#create"
    get "/old" => "movies#old"
    get "/action" => "movies#action"
+   get "/drama" => "movies#drama"
+   get "/comedy" => "movies#comedy"
+   get "/romance" => "movies#romance"
+   get "/thriller" => "movies#thriller"
+   get "/horror" => "movies#horror"
+   get "/sf" => "movies#sf"
+   get "/anime" => "movies#anime"
+   
+   
+   
    get "/result" => "movies#result"
 
  end

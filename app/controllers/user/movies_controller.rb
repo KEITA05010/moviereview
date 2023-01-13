@@ -19,6 +19,35 @@ class User::MoviesController < ApplicationController
         @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(28).to_json)['table']['results']
     end
     
+    def drama
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(18).to_json)['table']['results']
+    end
+    
+    def comedy
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(35).to_json)['table']['results']
+    end
+    
+    def romance
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(10749).to_json)['table']['results']
+    end
+    
+    def thriller
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(53).to_json)['table']['results']
+    end
+    
+    def horror
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(27).to_json)['table']['results']
+    end
+    
+    def sf
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(878).to_json)['table']['results']
+    end
+    
+    def anime
+        @tmdb_movies =  JSON.parse(Tmdb::Genre.movies(16).to_json)['table']['results']
+    end
+    
+    
     def result
         
     end

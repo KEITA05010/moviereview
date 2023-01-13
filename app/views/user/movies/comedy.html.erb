@@ -1,0 +1,27 @@
+<!--コメディ映画一覧-->
+
+   <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-1">
+                
+            </div>
+            <div class="col-lg-10">
+                <div class="chfont">
+                    <br>
+                    <h4>コメディ映画一覧</h4>
+                    <div class="movie-list row ">
+                        <% @tmdb_movies.each do |movie| %>
+                            <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+                                <p style="margin: 10px;"><h5> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></h5></p>
+                                <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
+                                <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;"></p>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div> 
+            <div class="col-lg-1">
+              
+            </div>
+        </div> 
+    </div> 
