@@ -8,16 +8,34 @@
       <div class="col-lg-10">
         <%= flash[:notice] %>
         <br>
-        <h3>上映中の映画一覧</h3>
+        <h3 class="maintitle">MOVIE REVIEW</h3>
+        
         <div class="movie-list row ">
-          
-          <% @tmdb_movies['table']['results'].each do |movie| %>
-            <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
-              <p style="margin: 10px;"> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></p>
-              <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
-              <img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;" style="margin: 10px;">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/assets/anime.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/anime.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/nature-3.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/nature-4.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="img/nature-5.jpg" alt="">
+              </div>
             </div>
-          <% end %>
+            <!-- ページネーションの要素 -->
+            <div class="swiper-pagination"></div>
+            <!-- ナビゲーションボタン （前、次） -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+         
         </div>
         
       </div> 
