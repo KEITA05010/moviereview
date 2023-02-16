@@ -2,6 +2,8 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+//= require jquery
+//= require rails-ujs
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -14,6 +16,9 @@ import "bootstrap";
 import '@fortawesome/fontawesome-free/js/all'
 import "../stylesheets/application" 
 import "../stylesheets/test"
+import "script.js"
+import Swiper from 'swiper/swiper-bundle.js';  
+import 'swiper/swiper-bundle.css';　　　　　　　
 
 Rails.start()
 Turbolinks.start()
@@ -30,4 +35,10 @@ $(function() {
   });
 });
 
+$('.single-item').slick();
 
+$(function() {
+    $('.a').slick({
+        dots: true,
+    });
+});
