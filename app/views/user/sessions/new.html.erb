@@ -1,39 +1,47 @@
 <!--会員ログイン画面-->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2">
+    <div class="container">
         
-      </div>
-      <div class="col-lg-10">
-        <div class="chfont">
-          <br>
-          <h4>ログイン</h4>
-          <br>
-          <br>
-          <%= form_with model: @user, url: user_session_path do |f| %>
-            <div class="field">
-              <p><%= f.label :メールアドレス %></p>
-             <p> <%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
+        <div class="row">
+            <div class="col-lg-4">
+             
             </div>
             
-            <div class="field">
-             <p> <%= f.label :パスワード %></p>
-             <p><%= f.password_field :password, autocomplete: "current-password" %></p>
+            <div class="col-lg-7">
+                <div class="mainnew">
+                    <br>
+                    <h4 class="mainnew-text">ログイン</h4>
+                    <br>
+                    <%= form_with model: @user, url: user_session_path do |f| %>
+                    <div class="field">
+                        <%= f.label :メールアドレス %>
+                        <p> <%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
+                    </div>
+                    
+                    <div class="field">
+                        <%= f.label :パスワード %>
+                        <p><%= f.password_field :password, autocomplete: "current-password" %></p>
+                    </div>
+                    
+                    
+                    
+                    <div class="actions">
+                        <%= f.submit "ログイン" %>
+                    </div>
+                    <% end %>
+                    
+                    <br>
+                    <br>
+                    <br>
+                    会員登録を行ったことがない方はこちらから
+                    <p>⇒<%=link_to "新規登録", new_user_registration_path%></p>
+                    
+                </div>
+            </div> 
+            
+            <div class="col-lg-1">
+                
             </div>
             
-            
-            
-            <div class="actions">
-              <%= f.submit "ログイン" %>
-            </div>
-          <% end %>
-          <br>
-          <br>
-          <br>
-          <p><h4>会員登録を行ったことがない方</h4></p>
-          <p><%=link_to "こちら", new_user_registration_path%>から新規登録を行ってください</p>
-          
-        </div>
-      </div> 
+        </div> 
+        
     </div> 
-  </div> 
