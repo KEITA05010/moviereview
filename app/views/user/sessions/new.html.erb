@@ -1,47 +1,46 @@
-<!--会員ログイン画面-->
-    <div class="container">
-        
-        <div class="row">
-            <div class="col-lg-4">
-             
-            </div>
-            
-            <div class="col-lg-7">
-                <div class="mainnew">
-                    <br>
-                    <h4 class="mainnew-text">ログイン</h4>
-                    <br>
-                    <%= form_with model: @user, url: user_session_path do |f| %>
-                    <div class="field">
-                        <%= f.label :メールアドレス %>
-                        <p> <%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
-                    </div>
-                    
-                    <div class="field">
-                        <%= f.label :パスワード %>
-                        <p><%= f.password_field :password, autocomplete: "current-password" %></p>
-                    </div>
-                    
-                    
-                    
-                    <div class="actions">
-                        <%= f.submit "ログイン" %>
-                    </div>
-                    <% end %>
-                    
-                    <br>
-                    <br>
-                    <br>
-                    会員登録を行ったことがない方はこちらから
-                    <p>⇒<%=link_to "新規登録", new_user_registration_path%></p>
-                    
-                </div>
-            </div> 
-            
-            <div class="col-lg-1">
-                
-            </div>
-            
-        </div> 
-        
-    </div> 
+<div class="box">
+  <div class="box-inner">
+    <%= form_with model: @user, url: user_session_path do |f| %>
+      <h4 class="mainnew">ログイン</h4>
+      <div class="box-email">
+        <%= f.label :email, "メールアドレス" %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      
+      
+      
+      <div class="box-password">
+        <div class="a-row">
+          <div class="column-left">
+            <%= f.label :password, "パスワード" %>
+          </div>
+          <div class="column-right">
+            <%= link_to "パスワードを忘れた場合", new_user_registration_path %>
+          </div>
+        </div>
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+      <div class="box-login">
+        <%= f.submit "ログイン" %>
+        <div class="legal-text">
+          続行することで、MOVIE REVIEWの
+          <%= link_to "利用規約", "#" %>
+          および
+          <%= link_to "プライバシー規約", "#" %>
+          に同意するものとみなされます。
+        </div>
+        <% if devise_mapping.rememberable? %>
+          <div class="remember">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember, "ログインしたままにする" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="box-newusr">
+      <p><span>-----</span> MOVIE REVIEWのご登録はお済みですか？ <span>-------</span></p>
+      <%= link_to "アカウントを作成", new_user_registration_path %>
+    </div>
+  </div>
+</div>
