@@ -223,7 +223,9 @@ footer {
 
 
 
-////ログイン画面用/////
+////ログイン画面用///////////////////////////////////
+
+///ログインの枠///
 
 .box {
   width: 350px;
@@ -237,13 +239,15 @@ footer {
   padding: 20px 26px;
 }
 
-.mainnew {
+
+//ログイン(タイトル)//
+
+.mainlogin {
   font-weight: 400;
   font-size: 23px;
   line-height: 1.2;
-  margin-bottom: 10px;
-  padding-bottom: 4px;
-  padding: 0 0 0 90px ;
+  margin-bottom: 30px;
+  padding: 0 0 0 100px ;
   color: #111111;
 }
 
@@ -252,7 +256,7 @@ footer {
 }
 
 .box-password {
-  margin-bottom: 22px;
+  margin-bottom: 50px;
 }
 
 .box-email label, .box-password label {
@@ -277,30 +281,35 @@ footer {
   float: left;
 }
 
-.column-right {
-  float: right;
-}
+
 
 .box-password a {
   font-size: 13px;
 }
 
+
+
+//ログインボタン//
+
 .box-login {
-  margin-bottom: 26px;
+  margin-bottom: 50px;
 }
 
 .box-login input[type="submit"] {
   border-style: none;
   width: 100%;
   height: 31px;
-  background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
+  background: linear-gradient(to bottom,#6AD2E5,#58D0E6);    //ボタンの色のグラデーション
   border-radius: 3px;
   border: 1px #a88734 solid;
+  color: #ffffff;       //文字を白色にする
 }
+
+//////ログインボタン押した後の処理////////////
 
 .box-login input[type="submit"]:hover {
   cursor: pointer;
-  background: #f0c14b;
+  background: #3B7FE6;    //ボタンにマウスオーバーした後の色
 }
 
 .legal-text {
@@ -326,8 +335,10 @@ footer {
   text-decoration-color: #e7e7e7;
 }
 
+//アカウント作成ボタン
+
 .box-newusr a {
-  display: block;
+  display: block;    //ブロック要素にする//
   width: 100%;
   height: 31px;
   font-size: 13px;
@@ -343,4 +354,38 @@ footer {
   background: #e7e9ec;
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//新規登録//
+
+
+.box2 {
+  width: 350px;
+  height: 450px;
+  margin: 60px auto 0;
+  border-radius: 4px;
+  border: 1px #ddd solid;
+}
+
+.box2-inner {
+  padding: 20px 26px;
+}
+
+
+//新規登録(タイトル)//
+
+.mainnew {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  padding: 0 0 0 100px ;
+  color: #111111;
+}
+
+
+.box2-email {
+  margin-bottom: 13px;
+}
+
+.box2-password {
+  margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 <div class="box">
   <div class="box-inner">
     <%= form_with model: @user, url: user_session_path do |f| %>
-      <h4 class="mainnew">ログイン</h4>
+      <h4 class="mainlogin">ログイン</h4>
       <div class="box-email">
         <%= f.label :email, "メールアドレス" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -9,38 +9,25 @@
       
       
       
-      <div class="box-password">
-        <div class="a-row">
-          <div class="column-left">
-            <%= f.label :password, "パスワード" %>
-          </div>
-          <div class="column-right">
-            <%= link_to "パスワードを忘れた場合", new_user_registration_path %>
-          </div>
+        <div class="box-password">
+            <div class="a-row">
+              <div class="column-left">
+                 <%= f.label :password, "パスワード" %>
+              </div>
+              
+            </div>
+             <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
-        <%= f.password_field :password, autocomplete: "current-password" %>
-      </div>
+      
       <div class="box-login">
-        <%= f.submit "ログイン" %>
-        <div class="legal-text">
-          続行することで、MOVIE REVIEWの
-          <%= link_to "利用規約", "#" %>
-          および
-          <%= link_to "プライバシー規約", "#" %>
-          に同意するものとみなされます。
-        </div>
-        <% if devise_mapping.rememberable? %>
-          <div class="remember">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember, "ログインしたままにする" %>
-          </div>
-        <% end %>
+            <%= f.submit "ログイン" %>
       </div>
+      
     <% end %>
 
     <div class="box-newusr">
-      <p><span>-----</span> MOVIE REVIEWのご登録はお済みですか？ <span>-------</span></p>
-      <%= link_to "アカウントを作成", new_user_registration_path %>
+      <p><span>-----</span> アカウントをお持ちでない方はこちらから <span>------</span></p>
+      <%= link_to "新規登録する", new_user_registration_path %>
     </div>
   </div>
 </div>
