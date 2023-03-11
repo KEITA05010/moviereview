@@ -1,24 +1,28 @@
-# README
+# moviereview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+### サイトテーマ
+公開中の新作映画やかつて公開された映画の見どころを知ることができるレビューサイト、閲覧者はレビューにコメントすることもできる。
 
-Things you may want to cover:
+### テーマを選んだ理由
+映画の見どころを知ることで見る人が多くなり映画業界に対して多少の利益をもたらすことができる。また、公開終了した映画のレビューも観ることができるのでサブスクやレンタルショップの利益も上がる
 
-* Ruby version
+### ターゲットユーザ
+-映画が好きな人
+-公開中、もしくは公開終了した映画が気になっている人
+-映画を見る予定がある人
 
-* System dependencies
+### 主な利用シーン
+-映画館で映画を見たいがどの映画が良いのか悩んでいるとき
+-レンタルビデオ店やサブスクで何か良い映画を見たくなったとき
+-何か気になった映画があったとき
 
-* Configuration
+## 設計書
+実装機能リストURL：https://docs.google.com/spreadsheets/d/1KMnoXBYDPnwpUUGUgdtP_So3bKwkf0CnfJZhdJET3I4/edit#gid=1091086188
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
