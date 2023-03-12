@@ -11,7 +11,7 @@
                     <h4 class="movietitle">SF映画</h4>
                     <div class="movie-list row ">
                         <% @tmdb_movies.each do |movie| %>
-                            <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border:solid">
+                             <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border: 3px #ddd solid">
                                 <p style="margin: 10px;"><h5> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></h5></p>
                                 <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
                                 <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;"></p>
