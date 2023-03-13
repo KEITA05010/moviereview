@@ -1,58 +1,48 @@
 <!--映画詳細-->
     <div class="container">
         <div class="row mb-5">
+            
             <div class="col-lg-2">
               
             </div>
             
             <div class="col-lg-4">
-                
                 <div class="mainshow">
                     <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= @movie_data['poster_path'] %>" width~"300px;"></p>
                     <br>
                     <p style="margin: 10px;"> <h5> <%= @movie_data['title'] %></h5></p>
                     <p style="margin: 10px;"><%= @movie_data['release_date'] %>公開</p>
                 </div>
-                
             </div> 
             
-            
             <div class="col-lg-5">
-                
                 <div class="mainshow">
                     <p style="margin: 10px;"> <%= @movie_data['overview'] %></p>
                     <br>
                     <br>
                     <h5>コメント一覧</h5>
                     <%@comments.each do |comment| %>
-                    ID:<%=comment.user_id%>
-                    <%=comment.user.user_name%>
-                    <%=comment.content%>
+                        ID:<%=comment.user_id%>
+                        <%=comment.user.user_name%>
+                        <%=comment.content%>
                     <%end%>
                     <br>
                     <%= form_with model: @comment ,url: comments_path, method: :post do |f| %>
-                    <%= f.hidden_field :movie_id, :value => @movie.id %>
-                    <%= f.hidden_field :user_id, :value => current_user.id %>
-                    <%= f.label :content, "コメント" %>
-                    <%= f.text_area :content %>
-                    <%= f.submit 'コメントする'%>
+                        <%= f.hidden_field :movie_id, :value => @movie.id %>
+                        <%= f.hidden_field :user_id, :value => current_user.id %>
+                        <%= f.label :content, "コメント" %>
+                        <%= f.text_area :content %>
+                        <%= f.submit 'コメントする'%>
                     <%end%>
-                    
-                    
-                    
                     
                     <%= link_to 'お気に入りに追加する', favorite_path(@movie), method: :post %>
                     <br>
-                    
                 </div>
-                
             </div>
-            
             
             <div class="col-lg-1">
                 
             </div>
-            
             
         </div>
     </div> 

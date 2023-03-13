@@ -1,102 +1,110 @@
 <!--会員トップページ-->
 
-  <div class="container">
-    <div class="row mb-5">
-      
-        <div class="main-visual">
-        <h1 class="maintitle">MOVIE REVIEW</h1>
-        </div>
-        
-      <div class="col-lg-1">
-        
-      </div>
-      <div class="col-lg-10">
-        <%= flash[:notice] %>
-        
-        
-        <br>
-        
-        <div class="movie-list row ">
-          <div class="swiper">
-          <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="moviejenre">話題の新作映画はこちら</div>
-          <a href="/movies"><img src="/assets/movie.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <div class="moviejenre">人気の高い映画はこちら</div>
-            <a href="/old"><img src="/assets/movie2.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <div class="moviejenre">手に汗握るアクション映画</div>
-          <a href="/action"><img src="/assets/action.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <div class="moviejenre">心揺さぶられるドラマ映画</div>
-          <a href="/drama"><img src="/assets/drama.jpg" alt=""></a>
-          </div>
-          <div class="swiper-slide">
-            <div class="moviejenre">笑いたいときのコメディ映画</div>
-            <div class="moviejenre"></div>
-          <a href="/comedy"><img src="/assets/comedy.jpg" alt=""></a>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="moviejenre">ときめくロマンス映画</div>
-          <a href="/romance"><img src="/assets/romance.jpg" alt=""></a>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="moviejenre">身の毛もよだつスリラー映画</div>
-          <a href="/thriller"><img src="/assets/thriller.jpg" alt=""></a>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="moviejenre">眠れなくなるホラー映画</div>
-          <a href="/horror"><img src="/assets/horror.jpg" alt=""></a>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="moviejenre">リアルから飛び出せるSF映画</div>
-         <a href="/sf"> <img src="/assets/sf.jpg" alt=""></a>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="moviejenre">ワクワクするアニメ映画</div>
-          <a href="/anime"><img src="/assets/anime.jpg" alt=""></a>
-          </div>
-          
-          </div>
-          <!-- ページネーションの要素 -->
-          <div class="swiper-pagination"></div>
-          <!-- ナビゲーションボタン （前、次） -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          </div>
-        </div>
-        
-        <br>
-        <br>
-        
-        <h5 class="movietitle">おすすめ映画</h5>
-        <div class="movie-list row ">
-         <% @tmdb_movies['table']['results'].each do |movie| %>
-         <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border: 3px #ddd solid">
-             <p style="margin: 10px;"> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></p>
-             <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
-             <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;"></p>
-         </div>
-       <% end %>
-       </div> 
-        
-      </div> 
-      <div class="col-lg-1">
-        <span id="back">
-          <a href="">
-            <%= image_tag 'up.png', data: {"turbolinks"=>false}, class: "arrow" %>
-          </a>
-        </span>
-      </div>
+    <div class="container">
+        <div class="row mb-5">
+            
+            <div class="col-lg-1">
+                
+            </div>
+            
+            <div class="col-lg-10">
+                <%= flash[:notice] %>
+                
+                <div class="main-visual">
+                    <h1 class="maintitle">MOVIE REVIEW</h1>
+                </div>
+                
+                <br>
+                
+                <div class="movie-list row ">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">話題の新作映画はこちら</div>
+                                <a href="/movies"><img src="/assets/movie.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">人気の高い映画はこちら</div>
+                                <a href="/old"><img src="/assets/movie2.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">手に汗握るアクション映画</div>
+                                <a href="/action"><img src="/assets/action.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">心揺さぶられるドラマ映画</div>
+                                <a href="/drama"><img src="/assets/drama.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">笑いたいときのコメディ映画</div>
+                                <a href="/comedy"><img src="/assets/comedy.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">ときめくロマンス映画</div>
+                                <a href="/romance"><img src="/assets/romance.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">身の毛もよだつスリラー映画</div>
+                                <a href="/thriller"><img src="/assets/thriller.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">眠れなくなるホラー映画</div>
+                                <a href="/horror"><img src="/assets/horror.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">リアルから飛び出せるSF映画</div>
+                                <a href="/sf"> <img src="/assets/sf.jpg" alt=""></a>
+                            </div>
+                            
+                            <div class="swiper-slide">
+                                <div class="moviejenre">ワクワクするアニメ映画</div>
+                                <a href="/anime"><img src="/assets/anime.jpg" alt=""></a>
+                            </div>
+                            
+                        </div>
+                        <!-- ページネーションの要素 -->
+                        <div class="swiper-pagination"></div>
+                        <!-- ナビゲーションボタン （前、次） -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    
+                </div>
+                
+                <br>
+                <br>
+                
+                <h5 class="movietitle">おすすめ映画</h5>
+                <div class="movie-list row ">
+                    <% @tmdb_movies['table']['results'].each do |movie| %>
+                        <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border: 3px #ddd solid">
+                            <p style="margin: 10px;"> <%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></p>
+                            <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
+                            <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;"></p>
+                        </div>
+                    <% end %>
+                </div>
+                
+            </div> 
+            
+            <div class="col-lg-1">
+                <span id="back">
+                    <a href="">
+                        <%= image_tag 'up.png', data: {"turbolinks"=>false}, class: "arrow" %>
+                    </a>
+                </span>
+            </div>
+            
+        </div> 
     </div> 
-  </div> 
-   <script src="script.js"></script>
+    
+    <script src="script.js"></script>
