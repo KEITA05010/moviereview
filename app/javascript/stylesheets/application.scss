@@ -211,8 +211,35 @@ footer {
 }
 
 
+
+// 映画詳細画面
+
+
 .mainshow {
-  padding: 100px 0 0 0 ;
+  width: 800px;
+  display: flex; /* Flexboxの利用 */
+  justify-content: center; /* 要素の横並び・中央寄せ */
+  margin: 0 auto; /* 要素の中央揃え */
+  padding: 70px 0; /* 上下に70px、左右に0pxの内側余白 */
+}
+
+.show-item {
+  padding: 10px 50px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 2px #ddd solid;
+  display: flex;  //これで映画情報を画像の横に縦方向で並べられるようになる
+}
+
+.movie-text {
+  padding: 0 0 0 80px;
+}
+
+
+.movie-date {
+  font-size: 12px;
+  display: inline-block;
+  margin: 10px;
 }
 
 
@@ -223,9 +250,9 @@ footer {
 
 
 
-////ログイン画面用///////////////////////////////////
+//ログイン画面用
 
-///ログインの枠///
+//ログインの枠
 
 .box {
   width: 350px;
@@ -305,7 +332,7 @@ footer {
   color: #ffffff;       //文字を白色にする
 }
 
-//////ログインボタン押した後の処理////////////
+//ログインボタン押した後の処理
 
 .box-login input[type="submit"]:hover {
   cursor: pointer;
@@ -338,7 +365,7 @@ footer {
 //アカウント作成ボタン
 
 .box-newusr a {
-  display: block;    //ブロック要素にする//
+  display: block;    //ブロック要素にする
   width: 100%;
   height: 31px;
   font-size: 13px;
@@ -370,7 +397,7 @@ footer {
 }
 
 
-//新規登録(タイトル)//
+//新規登録(タイトル)
 
 .mainnew {
   font-weight: 400;
