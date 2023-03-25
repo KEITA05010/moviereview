@@ -246,6 +246,23 @@ footer {
   margin: 10px;
 }
 
+.box-favorite a {
+  display: block;    //ブロック要素にする
+  width: 180px;
+  height: 31px;
+  font-size: 13px;
+  color: #111;
+  line-height: 31px;
+  text-align: center;
+  background: #F4ED44;
+  border-radius: 3px;
+  border: 1px #a2a6ac solid;
+}
+
+.box-favorite a:hover {
+  background: #DAD881;
+}
+
 
 .comment-box {
   width: 1100px;

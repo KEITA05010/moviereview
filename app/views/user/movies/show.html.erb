@@ -11,7 +11,11 @@
 <p class="movie_data"> <h5> <%= @movie_data['title'] %></h5></p>
 <p class="movie_data"><%= @movie_data['release_date'] %>公開</p>
 <p class="movie_data"> <%= @movie_data['overview'] %></p>
-<p class="movie_data"><%= link_to 'お気に入りに追加する', favorite_path(@movie), method: :post %></p>
+
+<div class="box-favorite">
+<%= link_to 'お気に入りに追加する', favorite_path(@movie), method: :post %>
+</div>
+
 </section>
 </div>
 </div>
@@ -19,13 +23,14 @@
 <div class="comment-box">
 
 <div class="comment-title">コメント一覧</div>
-<div class="comment-view">
 <%@comments.each do |comment| %>
+<div class="comment-view">
 ID:<%=comment.user_id%>
-<%=comment.user.user_name%>
+<%=comment.user.user_name%><br>
 <%=comment.content%>
-<%end%>
 </div>
+<%end%>
+
 
 <%= form_with model: @comment ,url: comments_path, method: :post do |f| %>
 <%= f.hidden_field :movie_id, :value => @movie.id %>
