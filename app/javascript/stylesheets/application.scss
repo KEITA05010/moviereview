@@ -494,3 +494,13 @@ footer {
 }
 
 
+
+.movie-title a  {
+  display: block;    //ブロック要素にする
+  color: #111;
+  text-align: center;
+  background: #ddd;
+  padding: 1px 2px;
+  border-left: 5px solid #000;
+  margin: 10px;
+}
