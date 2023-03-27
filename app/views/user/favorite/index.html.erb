@@ -17,7 +17,7 @@
         <%  movie = Tmdb::Movie.detail(id)%>
         
         <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['poster_path'] %>" width~"300px;"></p>
-        <p style="margin: 10px;"><h5><%=link_to movie['title'],movie_path(movie['id']) %></h5></p>
+        <div class="movie-title"><%=link_to movie['title'],movie_path(movie['id']) %></div>
         <p style="margin: 10px;"><%= movie['release_date'] %>公開</p
         <br>
         
