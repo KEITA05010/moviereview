@@ -46,31 +46,6 @@
               </li>
               
               
-              <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="/movies" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      映画一覧
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="/movies">最新作</a>
-                      <a class="dropdown-item" href="/old">人気</a>
-                      <a class="dropdown-item" href="/action">アクション</a>
-                      <a class="dropdown-item" href="/drama">ドラマ</a>
-                      <a class="dropdown-item" href="/comedy">コメディ</a>
-                      <a class="dropdown-item" href="/romance">ロマンス</a>
-                      <a class="dropdown-item" href="/thriller">スリラー</a>
-                      <a class="dropdown-item" href="/horror">ホラー</a>
-                      <a class="dropdown-item" href="/sf">SF</a>
-                      <a class="dropdown-item" href="/anime">アニメ</a>
-                      <a class="dropdown-item" href="/favorite">お気に入り</a>
-                    </div>
-              </li>
-              
-              
-               <li class="nav-item active">
-                    <a class="nav-link" href="/about">サイト概要</a>
-                </li>
-              
-              
               <li class="nav-item">
                 <%= link_to destroy_user_session_path,method: :delete, class: "nav-link text-light" do %>
                   ログアウト
@@ -80,31 +55,7 @@
               
               <% elsif admin_signed_in? %>
               
-              
-              
-             <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="/movies" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  映画一覧
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="/movies">最新作</a>
-                  <a class="dropdown-item" href="/old">人気</a>
-                  <a class="dropdown-item" href="/action">アクション</a>
-                  <a class="dropdown-item" href="/drama">ドラマ</a>
-                  <a class="dropdown-item" href="/comedy">コメディ</a>
-                  <a class="dropdown-item" href="/romance">ロマンス</a>
-                  <a class="dropdown-item" href="/thriller">スリラー</a>
-                  <a class="dropdown-item" href="/horror">ホラー</a>
-                  <a class="dropdown-item" href="/sf">SF</a>
-                  <a class="dropdown-item" href="/anime">アニメ</a>
-                </div>
-            </li>
-              
-              
-              
-              
-              
-              
+
               <li class="nav-item">
                 <%= link_to destroy_admin_session_path,method: :delete, class: "nav-link text-light" do %>
                   ログアウト(管理人）
@@ -119,34 +70,12 @@
                   <%= f.submit "検索" %>
                 <% end %>
               </div>
-                
-                <li class="nav-item dropdown active">
-                    <a class="nav-link dropdown-toggle" href="/movies" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      映画一覧
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="/movies">最新作</a>
-                      <a class="dropdown-item" href="/old">人気</a>
-                      <a class="dropdown-item" href="/action">アクション</a>
-                      <a class="dropdown-item" href="/drama">ドラマ</a>
-                      <a class="dropdown-item" href="/comedy">コメディ</a>
-                      <a class="dropdown-item" href="/romance">ロマンス</a>
-                      <a class="dropdown-item" href="/thriller">スリラー</a>
-                      <a class="dropdown-item" href="/horror">ホラー</a>
-                      <a class="dropdown-item" href="/sf">SF</a>
-                      <a class="dropdown-item" href="/anime">アニメ</a>
-                    </div>
-                </li>
-                
-                
-                
-                <li class="nav-item active">
-                    <a class="nav-link" href="/about">サイト概要</a>
-                </li>
+              
+              <div>
                 <li class="nav-item active">
                     <a class="nav-link" href="/users/sign_in">ログイン</a>
                 </li>
-              
+              </div>
               
               <% end %>
               </ul>
@@ -154,6 +83,25 @@
           </div>
         </nav>
       </header>
+      
+      <!-- navigation -->
+
+    <nav>
+      <ul class="nav-list bg-dark">
+        <li class="nav-list-item">
+          <a href="/">TOP</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/about">About</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/">Movie</a>
+          </li>
+        <li class="nav-list-item">
+          <a href="/favoritetest">お気に入り</a>
+          </li>  
+　　　</ul>
+    </nav>
       
       
       <div class="main">
@@ -163,9 +111,6 @@
       </div>
       </div>
       
-      <footer class="bg-dark">
-        フッター
-      </footer>
       
   </body>
 </html>

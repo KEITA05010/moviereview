@@ -83,7 +83,7 @@
                 <br>
                 <br>
                 
-                <h5 class="movietitle">おすすめ映画</h5>
+                <h5 class="movietitle">おすすめな映画</h5>
                 <div class="movie-list row ">
                     <% @tmdb_movies['table']['results'].each do |movie| %>
                         <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border: 3px #ddd solid">
@@ -97,12 +97,14 @@
             </div> 
             
             <div class="col-lg-1">
-                <span id="back">
+               
+            </div>
+            
+             <span id="back">
                     <a href="">
                         <%= image_tag 'up.png', data: {"turbolinks"=>false}, class: "arrow" %>
                     </a>
                 </span>
-            </div>
             
         </div> 
     </div> 
