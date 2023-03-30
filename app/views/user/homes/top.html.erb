@@ -10,11 +10,6 @@
             <div class="col-lg-10">
                 <%= flash[:notice] %>
                 
-                <div class="main-visual">
-                    <h1 class="maintitle">MOVIE REVIEW</h1>
-                </div>
-                
-                <br>
                 
                 <div class="movie-list row ">
                     <div class="swiper">
@@ -83,7 +78,7 @@
                 <br>
                 <br>
                 
-                <h5 class="movietitle">おすすめな映画</h5>
+                <h5 class="movietitle">おすすめ映画</h5>
                 <div class="movie-list row ">
                     <% @tmdb_movies['table']['results'].each do |movie| %>
                         <div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border: 3px #ddd solid">
