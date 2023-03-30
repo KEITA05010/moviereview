@@ -187,7 +187,10 @@ body {
 
 .movietitle {
    text-align:center;
-   padding: 5px 30px 0 0 ;
+   color: #ffffff;
+   background: #555555;
+   border-right: 10px #F0515C solid;
+   border-left: 10px #F0515C solid;
 }
 
 
@@ -477,10 +480,10 @@ body {
 
 .movie-title a  {
   display: block;    //ブロック要素にする
-  color: #111;
-  background: #ddd;
+  color: #FFFFFF;
+  background: #555555;
   padding: 1px 2px;
-  border-left: 5px solid #000;
+  margin: 0 auto;
 }
 
 

@@ -84,8 +84,29 @@
         </nav>
       </header>
       
+      <% if user_signed_in? %>
       <!-- navigation -->
 
+    <nav>
+      <ul class="nav-list bg-dark">
+        <li class="nav-list-item">
+          <a href="/">TOP</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/about">About</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/">Movie</a>
+          </li>
+        <li class="nav-list-item">
+          <a href="/favorite">お気に入り</a>
+          </li>  
+　　　</ul>
+    </nav>
+    
+    <% elsif admin_signed_in? %>
+    
+    
     <nav>
       <ul class="nav-list bg-dark">
         <li class="nav-list-item">
@@ -102,7 +123,37 @@
           </li>  
 　　　</ul>
     </nav>
-      
+    
+    
+    
+    
+    <% else %>
+    
+    
+    
+        <nav>
+      <ul class="nav-list bg-dark">
+        <li class="nav-list-item">
+          <a href="/">TOP</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/about">About</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/">Movie</a>
+          </li>
+        <li class="nav-list-item">
+          <a href="/favoritetest">お気に入り</a>
+          </li>  
+　　　</ul>
+    </nav>
+    
+    
+    
+    
+    <% end %>
+    
+    
       
       <div class="main">
       <div class="content">
