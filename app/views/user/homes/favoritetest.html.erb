@@ -3,12 +3,11 @@
 <div class="favoritetest-content">
 <div class="favoritetest-item">
     
-    <h5>お気に入り</h5>
+    <h5 class="fav-title">お気に入り</h5>
     <br>
-    <p>ログインすると気に入った映画を
-    こちらのページに保存することができます</p>
-    <p>初めての方はこちら→<%=link_to "新規登録", new_user_registration_path%></p>
-    <p>登録したことがある方→<%=link_to "ログイン", new_user_session_path%></p>
+    <p>ログインするとこちらのページに気に入った映画を保存することができます</p>
+    <p class="favoritetest-link">初めての方はこちら→ <%=link_to "新規登録", new_user_registration_path%></p>
+    <p class="favoritetest-link">登録したことがある方→ <%=link_to "ログイン", new_user_session_path%></p>
  
 </div>
 </div>
