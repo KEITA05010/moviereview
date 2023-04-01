@@ -508,35 +508,77 @@ body {
 
 // お気に入り（ログイン前）
 
-.fav-title {
-  color: #FFFFFF;
-  width: 800px;
-  background-color: #EA2F23;
-  padding: 5px 6px;
-  border-left: 5px solid #000;
-}
 
-.favoritetest-main {
-  padding: 70px 0; /* 上下に70px、左右に0pxの内側余白 */
+
+.fav-main {
+  padding: 30px 0;
 }
 
 
-.favoritetest-content {
-  width: 800px;
+.fav-content {
   display: flex; /* Flexboxの利用 */
-  justify-content: center; /* 要素の横並び・中央寄せ */
   margin: 0 auto; /* 要素の中央揃え */
-  padding-bottom: 70px;
+  padding: 13px 265px;
 }
 
-.favoritetest-item {
-  padding: 10px 50px;
-  margin-bottom: 20px;
+.fav-title  {
+  line-height: 40px;
+  position: relative;
+  height: 40px;
+  margin: 2em 10px 1em;
+  padding: 0 2rem;
+  text-align: center;
+  color: #fff;
+  background: #fa4141;
+}
+
+.fav-title:before,
+.fav-title:after {
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 18px;
+  content: '';
+  border: 20px solid #fa4141;
+}
+
+.fav-title:after {
+  right: -10px;
+  border-right-width: 5px;
+  border-right-color: transparent;
+}
+
+.fav-title span {
+  position: relative;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fav-item {
+  width: 800px;
+  margin: 0 auto; /* 要素の中央揃え */
+  padding: 50px 30px;
   border-radius: 4px;
   border: 2px #ddd solid;
 }
 
-.favoritetest-link a  {
+.fav-link a  {
   padding: 1px 10px;
   color: #FFFFFF;
   background: #555555;
