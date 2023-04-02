@@ -7,7 +7,7 @@
    <div class="col-lg-10">
     <div class="chfont">
      <br>
-     <h4>お気に入り</h4>
+     <h4 class="page-title">お気に入り</h4>
      
      <br>
      <div class="movie-list row ">
@@ -18,8 +18,9 @@
         
         
         <div class="movie-title"><%=link_to movie['title'],movie_path(movie['id']) %></div>
+        <p style="margin: 10px;"><%= movie['release_date'] %>公開</p>
         <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['poster_path'] %>" width~"300px;"></p>
-        <p style="margin: 10px;"><%= movie['release_date'] %>公開</p
+        
         <br>
         
        </div>

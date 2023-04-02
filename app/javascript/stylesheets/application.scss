@@ -185,14 +185,6 @@ body {
    padding: 5px ;
 }
 
-.movietitle {
-   text-align:center;
-   color: #ffffff;
-   background: #555555;
-   border-right: 10px #F0515C solid;
-   border-left: 10px #F0515C solid;
-}
-
 
 
 // 映画詳細画面
@@ -521,7 +513,8 @@ body {
   padding: 13px 265px;
 }
 
-.fav-title  {
+.page-title  {
+  width: 300px;
   line-height: 40px;
   position: relative;
   height: 40px;
@@ -532,8 +525,8 @@ body {
   background: #fa4141;
 }
 
-.fav-title:before,
-.fav-title:after {
+.page-title:before,
+.page-title:after {
   position: absolute;
   top: 0;
   display: block;
@@ -542,30 +535,16 @@ body {
   border: 20px solid #fa4141;
 }
 
-.fav-title:after {
+.page-title:after {
   right: -10px;
   border-right-width: 5px;
   border-right-color: transparent;
 }
 
-.fav-title span {
+.page-title span {
   position: relative;
   display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
