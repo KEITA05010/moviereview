@@ -8,6 +8,6 @@
 
 #if Rails.env.development?
    Admin.create(email: '5@1.com', password: '123456')
-    User.create!(email: 'reply@gmail.com', password: '123456')
+    User.create(email: 'test@gmail.com', password: '123456')
 #end
    
