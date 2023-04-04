@@ -9,11 +9,15 @@ class User::HomesController < ApplicationController
     end
     
     def about
-        
+      
+    end
+    
+    def list
+      
     end
     
     def success
-        
+      
     end
     
     def favoritetest
