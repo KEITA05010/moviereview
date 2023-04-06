@@ -15,6 +15,7 @@
     
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/02a1419f50.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -39,7 +40,9 @@
                   <%= form_with url: search_path, method: :get, local: true do |f| %>
                     <%= f.text_field :keyword, value: @keyword %>
                     
-                    <%= f.submit "検索" %>
+                    <button class="s-button" type="submit">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
                     
                   <% end %>
                 </div>
@@ -90,16 +93,16 @@
     <nav>
       <ul class="nav-list bg-dark">
         <li class="nav-list-item">
-          <a href="/">TOP</a>
+          <a href="/"><i class="fa-solid fa-house" style="color: #ffffff;"></i>TOP</a>
         </li>
         <li class="nav-list-item">
-          <a href="/about">About</a>
+          <a href="/about"><i class="fa-solid fa-book" style="color: #ffffff;"></i>About</a>
         </li>
         <li class="nav-list-item">
-          <a href="/list">Movie</a>
+          <a href="/list"><i class="fa-solid fa-film" style="color: #ffffff;"></i>Movie</a>
           </li>
         <li class="nav-list-item">
-          <a href="/favorite">お気に入り</a>
+          <a href="/favorite"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>お気に入り</a>
           </li>  
 　　　</ul>
     </nav>
@@ -134,16 +137,16 @@
         <nav>
       <ul class="nav-list bg-dark">
         <li class="nav-list-item">
-          <a href="/">TOP</a>
+          <a href="/"><i class="fa-solid fa-house" style="color: #ffffff;"></i>TOP</a>
         </li>
         <li class="nav-list-item">
-          <a href="/about">About</a>
+          <a href="/about"><i class="fa-solid fa-book" style="color: #ffffff;"></i>About</a>
         </li>
         <li class="nav-list-item">
-          <a href="/list">Movie</a>
+          <a href="/list"><i class="fa-solid fa-film" style="color: #ffffff;"></i>Movie</a>
           </li>
         <li class="nav-list-item">
-          <a href="/favoritetest">お気に入り</a>
+          <a href="/favoritetest"><i class="fa-solid fa-heart" style="color: #ffffff;"></i>お気に入り</a>
           </li>  
 　　　</ul>
     </nav>
