@@ -50,9 +50,7 @@
               
               
               <li class="nav-item">
-                <%= link_to destroy_user_session_path,method: :delete, class: "nav-link text-light" do %>
-                  Logout
-                <% end %>
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'header-link', data: { confirm: 'ログアウトしますか？' } %>
                </li>
               
               
@@ -75,7 +73,7 @@
               </div>
               
               <div>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="/users/sign_in">Login</a>
                 </li>
               </div>
