@@ -18,7 +18,8 @@
     <script src="https://kit.fontawesome.com/02a1419f50.js" crossorigin="anonymous"></script>
     <!--アイコンアニメーション用-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />　
-    
+    <!--ふわっとアニメーション用-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
   <body>
@@ -161,7 +162,7 @@
     </div>
     
     
-      
+      <div data-aos="fade-right"> <!--ふわっとアニメのAOS.js用-->
       <div class="main">
         
       <div class="content">
@@ -169,6 +170,13 @@
         <%= yield %>
       </div>
       </div>
+      </div>
+      <!--トップに戻るボタン用-->
 <script src="application.js"></script>
+<!--ふわっとアニメのAOS.js用-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init()
+</script>
   </body>
 </html>
