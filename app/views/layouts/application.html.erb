@@ -16,6 +16,9 @@
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/02a1419f50.js" crossorigin="anonymous"></script>
+    <!--アイコンアニメーション用-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />　
+    
   </head>
 
   <body>
@@ -91,16 +94,18 @@
     <nav>
       <ul class="nav-list bg-dark">
         <li class="nav-list-item">
-          <a href="/"><i class="fa-solid fa-house" style="color: #ffffff;"></i> TOP</a>
+          <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
+          
+
         </li>
         <li class="nav-list-item">
-          <a href="/about"><i class="fa-solid fa-book" style="color: #ffffff;"></i> About</a>
+          <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
         </li>
         <li class="nav-list-item">
-          <a href="/list"><i class="fa-solid fa-film" style="color: #ffffff;"></i> Movie</a>
+          <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
           </li>
         <li class="nav-list-item">
-          <a href="/favorite"><i class="fa-solid fa-heart" style="color: #ffffff;"></i> My Movie</a>
+          <a href="/favorite"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
           </li>  
 　　　</ul>
     </nav>
@@ -135,16 +140,16 @@
         <nav>
       <ul class="nav-list bg-dark">
         <li class="nav-list-item">
-          <a href="/"><i class="fa-solid fa-house" style="color: #ffffff;"></i> TOP</a>
+          <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
         </li>
         <li class="nav-list-item">
-          <a href="/about"><i class="fa-solid fa-book" style="color: #ffffff;"></i> About</a>
+          <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
         </li>
         <li class="nav-list-item">
-          <a href="/list"><i class="fa-solid fa-film" style="color: #ffffff;"></i> Movie</a>
+          <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
           </li>
         <li class="nav-list-item">
-          <a href="/favoritetest"><i class="fa-solid fa-heart" style="color: #ffffff;"></i> My Movie</a>
+          <a href="/favoritetest"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
           </li>  
 　　　</ul>
     </nav>
@@ -158,12 +163,12 @@
     
       
       <div class="main">
+        
       <div class="content">
        
         <%= yield %>
       </div>
       </div>
-      
-      
+<script src="application.js"></script>
   </body>
 </html>
