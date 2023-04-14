@@ -22,168 +22,164 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
 
-    <body>
-        <div class="up-side">
-            <header>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <div class="container">
-                        
-                        <a class="navbar-brand p-3" href="/"><span>MOVIE REVIEW</span></a>
-                        
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav ml-auto">
-                                
-                                
-                                
-                                
-                                <% if user_signed_in? %>
-                                    <li class="nav-item">
-                                    <div class="search-form">
-                                    <%= form_with url: search_path, method: :get, local: true do |f| %>
-                                    <%= f.text_field :keyword, value: @keyword %>
-                                    
-                                    <button class="s-button" type="submit">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    </button>
-                                    
-                                <% end %>
-                                    </div>
-                                    </li>
-                                    
-                                    
-                                    <li class="nav-item">
-                                    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'header-link', data: { confirm: 'ログアウトしますか？' } %>
-                                    </li>
-                                    
-                                    
-                                <% elsif admin_signed_in? %>
-                                    
-                                    
-                                    <li class="nav-item">
-                                        <%= link_to destroy_admin_session_path,method: :delete, class: "nav-link text-light" do %>
-                                            logout(管理人）
-                                        <% end %>
-                                    </li>
-                                    
-                                    
-                                <% else %>
-                                    <div class="search-form">
-                                        <%= form_with url: search_path, method: :get, local: true do |f| %>
-                                            <%= f.text_field :keyword, value: @keyword %>
-                                            
-                                            <button class="s-button" type="submit">
-                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                            </button>
-                                        <% end %>
-                                    </div>
-                                    
-                                    <div>
-                                        <li class="nav-item">
-                                            <%= link_to 'Login', new_user_session_path %>
-                                        </li>
-                                    </div>
-                                    
-                                <% end %>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </header>
-            
-            <% if user_signed_in? %>
-                <!-- navigation -->
-                
-                <nav>
-                    <ul class="nav-list bg-dark">
-                        <li class="nav-list-item">
-                            <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
-                        </li>
-                        
-                        <li class="nav-list-item">
-                            <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
-                        </li>
-                        
-                        <li class="nav-list-item">
-                            <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
-                        </li>
-                        
-                        <li class="nav-list-item">
-                            <a href="/favorite"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
-                        </li>  
-                    </ul>
-                </nav>
-                
-            <% elsif admin_signed_in? %>
-                
-                
-                <nav>
-                    <ul class="nav-list bg-dark">
-                        <li class="nav-list-item">
-                            <a href="/"> TOP</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="/about"> About</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="/list"> Movie</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="/favoritetest"> My Movie</a>
-                        </li>  
-                    </ul>
-                </nav>
+  <body>
+      <div class="up-side">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <a class="navbar-brand p-3" href="/"><span>MOVIE REVIEW</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
                 
                 
                 
                 
-            <% else %>
-                
-                
-                <nav>
-                    <ul class="nav-list bg-dark">
-                        <li class="nav-list-item">
-                            <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
-                        </li>
-                        <li class="nav-list-item">
-                            <a href="/favoritetest"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
-                        </li>  
-                    </ul>
-                </nav>
-                
-                
-                
-                
-            <% end %>
-        </div>
-        
-        
-        <div data-aos="fade-right"> <!--ふわっとアニメのAOS.js用-->
-            <div class="main">
-                <div class="content">
-                    <%= yield %>
+              <% if user_signed_in? %>
+              <li class="nav-item">
+                <div class="search-form">
+                  <%= form_with url: search_path, method: :get, local: true do |f| %>
+                    <%= f.text_field :keyword, value: @keyword %>
+                    
+                    <button class="s-button" type="submit">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+                    
+                  <% end %>
                 </div>
+              </li>
+              
+              
+              <li class="nav-item">
+                <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'header-link', data: { confirm: 'ログアウトしますか？' } %>
+               </li>
+              
+              
+              <% elsif admin_signed_in? %>
+              
+
+              <li class="nav-item">
+                <%= link_to destroy_admin_session_path,method: :delete, class: "nav-link text-light" do %>
+                  logout(管理人）
+                <% end %>
+              </li>
+              
+              
+              <% else %>
+              <div class="search-form">
+                <%= form_with url: search_path, method: :get, local: true do |f| %>
+                  <%= f.text_field :keyword, value: @keyword %>
+                  
+                                      <button class="s-button" type="submit">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+                <% end %>
+              </div>
+              
+              <div>
+                <li class="nav-item">
+                  <%= link_to 'Login', new_user_session_path %>
+                </li>
+              </div>
+              
+              <% end %>
+              </ul>
             </div>
-        </div>
+          </div>
+        </nav>
+      </header>
+      
+      <% if user_signed_in? %>
+      <!-- navigation -->
+
+    <nav>
+      <ul class="nav-list bg-dark">
+        <li class="nav-list-item">
+          <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
+          
+
+        </li>
+        <li class="nav-list-item">
+          <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
+          </li>
+        <li class="nav-list-item">
+          <a href="/favorite"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
+          </li>  
+　　　</ul>
+    </nav>
+    
+    <% elsif admin_signed_in? %>
+    
+    
+    <nav>
+      <ul class="nav-list bg-dark">
+        <li class="nav-list-item">
+          <a href="/"> TOP</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/about"> About</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/list"> Movie</a>
+          </li>
+        <li class="nav-list-item">
+          <a href="/favoritetest"> My Movie</a>
+          </li>  
+　　　</ul>
+    </nav>
+    
+    
+    
+    
+    <% else %>
+    
+    
+    
+        <nav>
+      <ul class="nav-list bg-dark">
+        <li class="nav-list-item">
+          <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
+          </li>
+        <li class="nav-list-item">
+          <a href="/favoritetest"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
+          </li>  
+　　　</ul>
+    </nav>
+    
+    
+    
+    
+    <% end %>
+    </div>
+    
+    
+      <div data-aos="fade-right"> <!--ふわっとアニメのAOS.js用-->
+      <div class="main">
         
-        <!--トップに戻るボタン用-->
-        <script src="application.js"></script>
-        <!--ふわっとアニメのAOS.js用-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init()
-        </script>
-        
-    </body>
+      <div class="content">
+       
+        <%= yield %>
+      </div>
+      </div>
+      </div>
+      <!--トップに戻るボタン用-->
+<script src="application.js"></script>
+<!--ふわっとアニメのAOS.js用-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init()
+</script>
+  </body>
 </html>
