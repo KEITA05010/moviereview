@@ -17,7 +17,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/02a1419f50.js" crossorigin="anonymous"></script>
     <!--アイコンアニメーション用-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />　
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.2.1/font-awesome-animation.css" type="text/css" media="all" />
     <!--ふわっとアニメーション用-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
@@ -111,7 +111,7 @@
         <li class="nav-list-item">
           <a href="/favorite"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
           </li>  
-　　　</ul>
+   </ul>
     </nav>
     
     <% elsif admin_signed_in? %>
@@ -131,7 +131,7 @@
         <li class="nav-list-item">
           <a href="/favoritetest"> My Movie</a>
           </li>  
-　　　</ul>
+</ul>
     </nav>
     
     
@@ -155,7 +155,7 @@
         <li class="nav-list-item">
           <a href="/favoritetest"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
           </li>  
-　　　</ul>
+</ul>
     </nav>
     
     
@@ -178,8 +178,6 @@
 <script src="application.js"></script>
 <!--ふわっとアニメのAOS.js用-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init()
-</script>
+<script>AOS.init()</script>
   </body>
 </html>
