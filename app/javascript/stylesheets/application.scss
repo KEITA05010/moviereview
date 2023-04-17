@@ -476,7 +476,7 @@
   display: block;    //ブロック要素にする
   color: #FFFFFF;
   background: #555555;
-  padding: 1px 2px;
+  padding: 3px 4px;
   margin: 0 auto;
 }
 
@@ -574,14 +574,15 @@
 }
 
 .fav-link a  {
-  padding: 1px 10px;
+  padding: 3px 5px;
   color: #FFFFFF;
   background: #555555;
   border-radius: 3px;
   border: 1px #a2a6ac solid;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 30px;
   text-align: center;
+  margin: 0 auto;
 }
 
 // 検索ボタン
@@ -590,12 +591,5 @@
   margin: 0 auto;
   width: 50px;
   border-radius: 3px;
-}
-
-
-.box1 {
-  background-color: #FF0000;
-  height: 200px;
-  width: 200px;
 }
 
