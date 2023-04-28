@@ -3,14 +3,9 @@
     <div class="container">
         <div class="row mb-5">
             
-            <div class="col-lg-1">
-                
-            </div>
             
-            <div class="col-lg-10">
                 <%= flash[:notice] %>
                 
-<!--スライドショー跡地-->
                 
                 <br>
                 <br>
@@ -19,23 +14,14 @@
                 <div class="movie-list row ">
                     <% @tmdb_movies['table']['results'].each do |movie| %>
                     
- <div class="card" style="width: 13rem;">
-  <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" class="card-img-top" alt="..."></p>
-  <div class="card-body">
-    <div class="movie-title"><%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></div>
-    <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+                    <div class="card" style="width: 12rem;">
+                        <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" class="card-img-top" alt="..."></p>
+                        <div class="card-body">
+                            <div class="movie-title"><%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></div>
+                            <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>
+                        </div>
+                    </div>
                     
-                    
-                    
-                        <!--<div class="col-lg-4 col-sm-6 col-xs-12 mt-3" style="border: 2px #ddd solid">-->
-                        <!--    <div class="movie-title"><%=link_to movie['table']['title'],movie_path(movie['table']['id']) %></div>-->
-                        <!--    <p style="margin: 10px;"> <%= movie['table']['release_date'] %>公開</p>-->
-                        <!--    <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" width~"300px;"></p>-->
-                        <!--</div>-->
-                        
                     <% end %>
                 </div>
               <span id="back">
@@ -45,11 +31,8 @@
              </span>   
             </div> 
             
-            <div class="down"></div>
             
-            <div class="col-lg-1">
-               
-            </div>
+           
             
             
         </div> 
