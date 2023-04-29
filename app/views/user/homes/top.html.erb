@@ -4,15 +4,15 @@
         <div class="row mb-5">
             
             
-                <%= flash[:notice] %>
-                
-                
-                <br>
-                <br>
-                
-                <h5 class="page-title">おすすめ映画</h5>
-                <div class="movie-list row ">
-                    <% @tmdb_movies['table']['results'].each do |movie| %>
+            <%= flash[:notice] %>
+            
+            
+            <br>
+            <br>
+            
+            <h5 class="page-title">おすすめ映画</h5>
+            <div class="movie-list row ">
+                <% @tmdb_movies['table']['results'].each do |movie| %>
                     
                     <div class="card" style="width: 12rem;">
                         <p style="margin: 10px;"><img src="https://image.tmdb.org/t/p/w200/<%= movie['table']['poster_path'] %>" class="card-img-top" alt="..."></p>
@@ -22,20 +22,17 @@
                         </div>
                     </div>
                     
-                    <% end %>
-                </div>
-              <span id="back">
-                    <a href="">
-                        <%= image_tag 'up.png', data: {"turbolinks"=>false}, class: "arrow" %>
-                    </a>
-             </span>   
-            </div> 
+                <% end %>
+            </div>
             
-            
-           
+            <span id="back">
+                <a href="">
+                <%= image_tag 'up.png', data: {"turbolinks"=>false}, class: "arrow" %>
+                </a>
+            </span> 
             
             
         </div> 
     </div> 
     
-    <script src="script.js"></script>
+    
