@@ -98,39 +98,38 @@
           
           <% if user_signed_in? %>
           <!-- navigation -->
-        <nav>
-          <ul class="nav-list bg-dark">
-            <li class="nav-list-item">
-              <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
-              
-            </li>
-            <li class="nav-list-item">
-              <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
-            </li>
-            <li class="nav-list-item">
-              <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
-              </li>
-            <li class="nav-list-item">
-              <a href="/favorite"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
-              </li>  
-       </ul>
-        </nav>
+            <nav>
+                <ul class="nav-list bg-danger">
+                    <li class="nav-list-item">
+                        <a href="/" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-house  fa-fw faa-horizontal" aria-hidden="true"></i> TOP</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/about" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-book fa-fw faa-horizontal" aria-hidden="true"></i> About</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/list" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-film fa-fw faa-horizontal" aria-hidden="true"></i> Movie</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/favorite" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-heart fa-fw faa-horizontal" aria-hidden="true"></i> My Movie</a>
+                    </li>  
+                </ul>
+            </nav>
         
         <% elsif admin_signed_in? %>
             
             <nav>
                 <ul class="nav-list bg-dark">
                     <li class="nav-list-item">
-                        <a href="/"> TOP</a>
+                        <a href="/" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-house  fa-fw faa-horizontal" aria-hidden="true"></i> TOP</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="/about"> About</a>
+                        <a href="/about" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-book fa-fw faa-horizontal" aria-hidden="true"></i> About</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="/list"> Movie</a>
+                        <a href="/list" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-film fa-fw faa-horizontal" aria-hidden="true"></i> Movie</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="/favoritetest"> My Movie</a>
+                        <a href="/favoritetest" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-heart fa-fw faa-horizontal" aria-hidden="true"></i> My Movie</a>
                     </li>  
                 </ul>
             </nav>
@@ -138,18 +137,18 @@
             
         <% else %>
             <nav>
-                <ul class="nav-list bg-dark">
+                <ul class="nav-list bg-danger">
                     <li class="nav-list-item">
-                        <a href="/"><i class="fa-solid fa-house faa-pulse animated-hover" style="color: #ffffff;"></i> TOP</a>
+                        <a href="/" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-house  fa-fw faa-horizontal" aria-hidden="true"></i> TOP</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="/about"><i class="fa-solid fa-book faa-pulse animated-hover" style="color: #ffffff;"></i> About</a>
+                        <a href="/about" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-book fa-fw faa-horizontal" aria-hidden="true"></i> About</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="/list"><i class="fa-solid fa-film faa-pulse animated-hover" style="color: #ffffff;"></i> Movie</a>
+                        <a href="/list" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-film fa-fw faa-horizontal" aria-hidden="true"></i> Movie</a>
                     </li>
                     <li class="nav-list-item">
-                        <a href="/favoritetest"><i class="fa-solid fa-heart faa-pulse animated-hover" style="color: #ffffff;"></i> My Movie</a>
+                        <a href="/favoritetest" class="btn btn-mod btn-border btn-medium btn-round faa-parent animated-hover"><i class="fa-solid fa-heart fa-fw faa-horizontal" aria-hidden="true"></i> My Movie</a>
                     </li>  
                 </ul>
             </nav>
