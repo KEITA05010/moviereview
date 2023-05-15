@@ -11,6 +11,12 @@
   text-decoration: none;
 }
 
+// リンク用
+a {
+    color: #000000;
+    text-decoration: none;
+  }
+
 
 // ヘッダーとナビゲーションバーの全体
 .up-side {
@@ -32,41 +38,37 @@
 
 // スライドショー画像調整用
 
-
-.channel_list {
-  padding: 0;
-  list-style-type: none;
-  text-align: left;
+.listings {
+  min-height: 100vh;
   color: #ab9ba9;
-}
-
-.channel {
-  height: 24px;
-  line-height: 24px;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
-  padding-right: 17px;
-  color: #ffffff;
-  padding-left: 1rem;
-}
+  min-width: 220px;
+  background-color: #4d394b;
+  overflow-y: auto;
   
-  a {
-    color: #ddd;
-    text-decoration: none;
-    width: 100%;
-    display: inline-block;
+  @media screen and (max-width: 600px) {
+    display: none;
+    position: absolute;
+    &.show {
+      display: block;
+    }
   }
-  
-  a:hover {
-    color: #eee;
-  }
-
-
-.channel.active {
-  background: #4c9689;
 }
 
+.listings_channels {
+  margin: 1rem 0 2rem;
+}
 
+.listings_header {
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  margin: 0 1rem 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ab9ba9;
+  width: 165px;
+  position: relative;
+}
 
 
 
